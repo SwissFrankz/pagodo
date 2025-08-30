@@ -48,6 +48,7 @@ git clone https://github.com/opsdisk/pagodo.git
 cd pagodo
 python3 -m venv .venv  # If using a virtual environment.
 source .venv/bin/activate  # If using a virtual environment.
+pip install --upgrade pip setuptools
 pip install -r requirements.txt
 ```
 
@@ -119,9 +120,9 @@ dorks["category_dict"].keys()
 dorks["category_dict"][1]["category_name"]
 ```
 
-## <span>pagodo.py</span>
+## pagodo.py
 
-### Using <span>pagodo.py</span> as a script
+### Using pagodo.py as a script
 
 ```bash
 python pagodo.py -d example.com -g dorks.txt
