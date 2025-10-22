@@ -128,6 +128,17 @@ dorks["category_dict"][1]["category_name"]
 python pagodo.py -d example.com -g dorks.txt
 ```
 
+### Interactive CLI wrapper
+
+For a menu-driven experience that prompts for each option (ideal for Windows users), run::
+
+    python pagodo_cli.py
+
+The interactive CLI keeps everything in the project folder by default, guides you through selecting the Google dorks
+file (supporting either `.txt` exports or GHDB `.json` dumps with automatic conversion to text), configuring delays,
+choosing proxy settings (comma-separated input or a text file), and deciding whether to save JSON or text output before
+launching the search.
+
 ### Using pagodo as a module
 
 The `pagodo.Pagodo.go()` function returns a dictionary with the data structure below (dorks used are made up examples):
