@@ -62,6 +62,31 @@ before running `pagodo.py`. The `dorks/` directory contains:
 - the `all_google_dorks.json` file which is the JSON response from GHDB
 - Individual category dorks
 
+### GUI helper (dork updater + search runner)
+
+If you prefer a guided workflow, launch the PyQt5 helper to download the latest GHDB dorks **and** run pagodo searches
+without using the CLI:
+
+```bash
+python pagodo_gui.py
+```
+
+For a headless smoke test (helpful in CI to ensure the PyQt widgets initialize), you can run:
+
+```bash
+QT_QPA_PLATFORM=offscreen python pagodo_gui.py --smoke-test
+```
+
+The GUI wraps the core modules so you can:
+
+- Download the latest GHDB dorks in the background (using `ghdb_scraper.retrieve_google_dorks`) and choose where the
+  refreshed `all_google_dorks.txt` is stored.
+- Pick a dork file to search, optionally restrict results to a specific domain, set per-dork result limits, configure
+  proxies, and tune delay/verbosity settings.
+- Decide whether to save JSON and/or text output, including choosing custom destinations.
+- Monitor progress through the activity log and status bar while the interface keeps controls disabled during
+  background work.
+
 Dork categories:
 
 ```python
