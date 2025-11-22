@@ -1,3 +1,4 @@
 beautifulsoup4==4.13.5
+PyQt5==5.15.11
 requests==2.32.5
 yagooglesearch==1.10.0
